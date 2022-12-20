@@ -5,12 +5,12 @@ let json = fetch('../../assets/static/users.json')
     .then(response => response.json())
     .then(data => { dataBase = data; });
 
-    json = fetch('../../assets/static/users.json')
+let json2 = fetch('../../assets/static/admins.json')
     .then(response => response.json())
     .then(data => { dataBase2 = data; });
 
    
-    // console.log(json);
+    console.log(json);
 
     // function printUsers() {
     //     let arrName = [];
@@ -22,18 +22,30 @@ let json = fetch('../../assets/static/users.json')
     //     return arrName;
     // }  
 
+    
+
     function redirect(link) {
         window.location.assign(link);
     }
 
     function login() {
+        let usernameAdmin = document.getElementById("username").value;
+        let passAdmin = document.getElementById("password").value;
         let username = document.getElementById("username").value;
         let password = document.getElementById("password").value;
-        // setTimeout(() => {}, 2000);
-        // console.log(Data_base4.test_user[0].username);
         let correctUsernameAndPassword = false;
-        for(let key in  dataBase.Users)
-        {
+        let correctUsernameAdminAndPassAdmin = false;
+    
+        if (usernameAdmin == dataBase2.adminUser.username && passAdmin == dataBase2.adminUser.password){
+            correctUsernameAdminAndPassAdmin = true;
+            localStorage.setItem("isLogin", true);
+            localStorage.setItem("username", dataBase2.adminUser.username);
+        } else {
+            localStorage.setItem("isLogin", false);
+
+        }
+
+        for(let key in  dataBase.Users) {   
             if (username == dataBase.Users[key].username && password == dataBase.Users[key].password) {
                 correctUsernameAndPassword = true;
                 localStorage.setItem("isLogin", true);
@@ -43,11 +55,16 @@ let json = fetch('../../assets/static/users.json')
 
             }
         }
-        if (correctUsernameAndPassword){
+    
+        if (correctUsernameAdminAndPassAdmin){
+            // alert("Yey");
+            idH1.innerHTML = "Hello " + localStorage.username + "\nYou Will Be Transferd to Projects in a Momemnt"  ;
+            setTimeout(() => {redirect('../../website/src/index1.html')}, 2000);
+        }else if(correctUsernameAndPassword){
             // alert("Yey");
             idH1.innerHTML = "Welcome " + localStorage.username + "\nYou Will Be Transferd to HomePage in a Momemnt"  ;
-            setTimeout(() => {redirect('../../website/src/index.html')}, 1000);
-        }else{
+            setTimeout(() => {redirect('../../website/src/index.html')}, 2000);}
+        else{
             alert("Wrong username or password");
 
         }
@@ -55,30 +72,10 @@ let json = fetch('../../assets/static/users.json')
         document.getElementById("password").value = "";
     }
 
+
+
     function onDeleteClick() {
         localStorage.removeItem("username");
         idH1.innerHTML = "";
         id_h2.innerHTML = "Goodbye";
     }
-
-    // async function get_data() {
-    //     const response = await fetch("../assets/static/users.json");
-    //     const data = await response.json();
-    //     console.log(data.users_page);
-    //     let user_login ;
-    //     let user_password ;
-    //     for (let key in data.users_page){
-    //         user_login = data.users_page[key].username55;
-    //         user_password = data.users_page[key].password55;
-        
-    //     const user_val = document.getElementById("user").value;
-    //     const password_val = document.getElementById("pass").value;
-    //     // console.log(user_login);
-    //     if (user_val == user_login && password_val == user_password){
-    //         alert(`${user_login}`);
-    //     }else{
-    //         alert("try again");
-    //     }
-    // }
-    // }
-    
