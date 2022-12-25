@@ -1,6 +1,4 @@
-
-
-.center {
+#center {
     display: flex;
     justify-content: center;
     text-align: center;
@@ -8,12 +6,7 @@
 }
 
 
-nav {
-    min-height: 40px;
-    background: rgb(161, 224, 251);
-}
-
-nav .nav_inside a {
+#inside_a {
     color: purple;
     text-decoration: none;
     padding: 0 12px;
@@ -21,16 +14,26 @@ nav .nav_inside a {
 }
 
 
-header {
-    min-height: 200px;
+#inside_li {
+    padding: 10px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin-right: 250px;
+    margin-left: 110px;
+}
+
+
+#inside_header {
+    min-height: 100px;
     background: rgb(70, 190, 241);
     color: black;
     font-weight: bolder;
 }
 
 
-main {
+#inside_main {
     min-height: 650px;
+    width: auto ;
     background-color: #b86bb8;
     color: black;
     text-align: justify;
@@ -46,17 +49,27 @@ main {
     direction: ltr;
 }
 
-#id_button{
-    justify-content: center;
+#id_button {
+    /* justify-content: center; */
+    direction: rtl;
 }
 
-main .row .box1 {
+#box1 {
     background-color: rgb(227, 143, 190);
     border: 2px solid black;
-    min-height: 500px;
+    min-height: 250px;
     margin-top: 70px;
     direction: ltr;
-     
+
+}
+
+#row {
+    background-color: rgb(227, 143, 190);
+    border: 2px solid black;
+    min-height: 250px;
+    margin-top: 70px;
+    direction: ltr;
+
 }
 
 #line_grey {
@@ -76,7 +89,7 @@ main .row .box2 {
     border: 2px solid black;
     min-height: 500px;
     margin-top: 70px;
-     
+
 }
 
 img {
@@ -89,10 +102,10 @@ img {
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;
-    background-size: cover; 
+    background-size: cover;
     height: 500px;
     margin: auto;
-  }
+}
 
 
 footer {

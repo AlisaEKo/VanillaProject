@@ -7,8 +7,8 @@ function redirect(link) {
 
 function checkUsher() {
     if(localStorage.username){
-        redirect('../../website/src/index.html');
+        redirect('../website/src/index.html');
     }else{
-        redirect('../../login/src/login.html');
+        redirect('../login/src/login.html');
     }
 }

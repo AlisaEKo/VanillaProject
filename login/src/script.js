@@ -58,11 +58,11 @@ let json2 = fetch('../../assets/static/admins.json')
     
         if (correctUsernameAdminAndPassAdmin){
             // alert("Yey");
-            idH1.innerHTML = "Hello " + localStorage.username + "\nYou Will Be Transferd to Projects in a Momemnt"  ;
+            idH1.innerHTML = "Hello " + localStorage.username + "\n You Will Be Transferd to Projects in a Momemnt"  ;
             setTimeout(() => {redirect('../../website/src/index1.html')}, 2000);
         }else if(correctUsernameAndPassword){
             // alert("Yey");
-            idH1.innerHTML = "Welcome " + localStorage.username + "\nYou Will Be Transferd to HomePage in a Momemnt"  ;
+            idH1.innerHTML = "Welcome " + localStorage.username + "\n You Will Be Transferd to HomePage in a Momemnt"  ;
             setTimeout(() => {redirect('../../website/src/index.html')}, 2000);}
         else{
             alert("Wrong username or password");
