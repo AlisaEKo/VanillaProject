@@ -1,3 +1,4 @@
+
 /*
 <!-- CSS only -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -35,96 +36,114 @@ document.head.appendChild(bscript);
 
 // navbar
 let navbar = document.createElement("nav")
-addclasses("container-fluid navbar-expand-lg d-flex align-items-center text-center bg-primary", navbar);
-navbar.setAttribute("id", "center");
+addclasses("container-fluid d-flex align-items-center text-center", navbar);
+navbar.setAttribute("id", "navbar");
 
 let navMaindiv = document.createElement("div");
-addclasses("conteiner", navMaindiv);
-
-let uList = document.createElement("ul");
-addclasses("nav nav-pills flex-column flex-sm-row", uList);
-
-
-let liList = document.createElement("li");
-addclasses("nav item", liList);
-liList.setAttribute("id", "inside_li")
-
-let liList1 = document.createElement("li");
-addclasses("nav item", liList1);
-liList1.setAttribute("id", "inside_li")
-
-let liList2 = document.createElement("li");
-addclasses("nav item", liList2);
-liList2.setAttribute("id", "inside_li")
+addclasses("conteiner center", navMaindiv);
+navMaindiv.setAttribute("id", "nav_container");
 
 
 
-let navBrand = document.createElement("a");
-addclasses("nav-link", navBrand);
+let navInside = document.createElement("div");
+addclasses("nav_inside", navInside);
 
+// links
+let navLink = document.createElement("a");
+addclasses("nav-link", navLink);
+navLink.textContent = "HomePage";
+navLink.setAttribute("href", "../../src/index1.html")
+// navLink.setAttribute("id", "inside_a")
 
-navBrand.textContent = "HomePage";
-navBrand.setAttribute("href", "../../src/index1.html")
-navBrand.setAttribute("id", "inside_a")
+let navLink1 = document.createElement("a");
+addclasses("nav-link", navLink);
+navLink1.textContent = "Projects";
+navLink1.setAttribute("href", "../../src/index1.html")
+// navLink1.setAttribute("id", "inside_a")
 
-let navBrand1 = document.createElement("a");
-addclasses("nav-link", navBrand1);
-navBrand1.textContent = "Projects";
-navBrand1.setAttribute("href", "../../src/index1.html")
-navBrand1.setAttribute("id", "inside_a")
+// logout Button
+let navButton = document.createElement("button");
+addclasses("btn btn-light", navButton);
+navButton.textContent = "Logout";
+navButton.setAttribute("onclick", "onDeleteClick()");
+navButton.setAttribute("id", "id_button");
 
-
-let navToggler = document.createElement("button");
-addclasses("btn btn-light", navToggler);
-navToggler.textContent = "Logout";
-navToggler.setAttribute("onclick", "onDeleteClick()");
-navToggler.setAttribute("id", "id_button");
-
-
-
-navMaindiv.appendChild(uList);
-uList.appendChild(liList);
-uList.appendChild(liList1);
-uList.appendChild(liList2);
-liList1.appendChild(navBrand)
-liList.appendChild(navBrand1);
-liList2.appendChild(navToggler);
+navMaindiv.appendChild(navInside);
+navInside.appendChild(navLink1);
+navInside.appendChild(navLink);
 navbar.appendChild(navMaindiv);
+navbar.appendChild(navButton);
 
 
 document.getElementById("navbar").appendChild(navbar);
-// end navbar
-
-// begin header
-let header = document.createElement("header");
-header.setAttribute("id", "inside_header");
-
-document.getElementById("header").appendChild(header);
-
-// end header
 
 
-// begin main
-let main= document.createElement("main");
-addclasses("container-fluid", main);
-main.setAttribute("id", "inside_main");
+// navBrand1.setAttribute("class", "nav_inside");
+
+
+// let uList = document.createElement("ul");
+// addclasses("nav nav-pills flex-column flex-sm-row", uList);
+
+
+// let liList = document.createElement("li");
+// addclasses("nav item", liList);
+// liList.setAttribute("id", "inside_li")
+
+// let liList1 = document.createElement("li");
+// addclasses("nav item", liList1);
+// liList1.setAttribute("id", "inside_li")
+
+// let liList2 = document.createElement("li");
+// addclasses("nav item", liList2);
+// liList2.setAttribute("id", "inside_li")
 
 
 
-let divMain = document.createElement("div");
-addclasses("conteiner", divMain);
 
 
-let divRow = document.createElement("div");
-addclasses("row", divRow);
-
-let divBox1 = document.createElement("div");
-addclasses("box1", divBox1);
-divBox1.setAttribute("id", "box1");
 
 
-main.appendChild(divMain);
-divMain.appendChild(divRow);
-divRow.appendChild(divBox1);
 
-document.getElementById("main").appendChild(main);
+
+// uList.appendChild(liList);
+// uList.appendChild(liList1);
+// uList.appendChild(liList2);
+
+// liList1.appendChild(navBrand)
+// liList.appendChild(navBrand1);
+// liList2.appendChild(navToggler);
+// // end navbar
+
+// // begin header
+// let header = document.createElement("header");
+// header.setAttribute("id", "inside_header");
+
+// document.getElementById("header").appendChild(header);
+
+// // end header
+
+
+// // begin main
+// let main= document.createElement("main");
+// addclasses("container-fluid", main);
+// main.setAttribute("id", "inside_main");
+
+
+
+// let divMain = document.createElement("div");
+// addclasses("conteiner", divMain);
+
+
+// let divRow = document.createElement("div");
+// addclasses("row", divRow);
+
+// let divBox1 = document.createElement("div");
+// addclasses("box1", divBox1);
+// divBox1.setAttribute("id", "box1");
+
+
+// main.appendChild(divMain);
+// divMain.appendChild(divRow);
+// divRow.appendChild(divBox1);
+
+// document.getElementById("main").appendChild(main);

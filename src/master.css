@@ -1,4 +1,9 @@
-#center {
+* .container {
+    max-width: 900px !important;
+} */
+
+
+.center {
     display: flex;
     justify-content: center;
     text-align: center;
@@ -6,13 +11,71 @@
 }
 
 
-#inside_a {
-    color: purple;
+nav {
+    min-height: 40px;
+    background: black;
+    color: white
+}
+
+#navbar {
+    justify-content: right;
+}
+
+
+#nav_container {
+    
+    justify-content: center;
+    
+}
+
+nav .nav_inside a {
+    color: rgb(243, 12, 243);
     text-decoration: none;
-    padding: 0 12px;
+    padding: 0 40px;
     font-weight: bolder;
 }
 
+
+header {
+    min-height: 100px;
+    background: rgb(83, 199, 248);
+    color: black;
+    font-weight: bolder;
+}
+
+
+main {
+    min-height: 300px;
+    width: auto;
+    background-color: rgb(243, 12, 243);
+    color: black;
+    text-align: justify;
+    border: 2px solid black;
+}
+
+
+main .row .box-top {
+    background-color: rgb(108, 218, 150);
+    border: 2px solid black;
+    min-height: 400px;
+}
+
+
+main .row .box-bottom {
+    background-color: rgb(108, 218, 150);
+    border: 2px solid black;
+    min-height: 300px;
+}
+
+
+footer {
+    min-height: 50px;
+    background: black;
+    color:  rgb(243, 12, 243);
+    font-weight: bolder;
+}
+
+/* ------------------------------------------------------------------ */
 
 #inside_li {
     padding: 10px;
@@ -20,25 +83,6 @@
     margin-bottom: 0px;
     margin-right: 250px;
     margin-left: 110px;
-}
-
-
-#inside_header {
-    min-height: 100px;
-    background: rgb(70, 190, 241);
-    color: black;
-    font-weight: bolder;
-}
-
-
-#inside_main {
-    min-height: 650px;
-    width: auto ;
-    background-color: #b86bb8;
-    color: black;
-    text-align: justify;
-    direction: rtl;
-
 }
 
 #id_h1 {
@@ -50,7 +94,7 @@
 }
 
 #id_button {
-    /* justify-content: center; */
+    justify-content: center;
     direction: rtl;
 }
 
@@ -84,13 +128,6 @@
     border: 1px solid white;
 }
 
-main .row .box2 {
-    background-color: rgb(175, 193, 95);
-    border: 2px solid black;
-    min-height: 500px;
-    margin-top: 70px;
-
-}
 
 img {
     width: 630px;
@@ -105,11 +142,4 @@ img {
     background-size: cover;
     height: 500px;
     margin: auto;
-}
-
-
-footer {
-    min-height: 50px;
-    background: rgb(161, 224, 251);
-    color: black;
 }
