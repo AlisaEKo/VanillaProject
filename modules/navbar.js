@@ -35,12 +35,12 @@ document.head.appendChild(bscript);
 
 
 // navbar
-let navbar = document.createElement("nav")
+let navbar = document.getElementById("navbar")
 addclasses("container-fluid d-flex align-items-center text-center", navbar);
-navbar.setAttribute("id", "navbar");
+// navbar.setAttribute("id", "navbar");
 
 let navMaindiv = document.createElement("div");
-addclasses("conteiner center", navMaindiv);
+addclasses("conteiner", navMaindiv);
 navMaindiv.setAttribute("id", "nav_container");
 
 

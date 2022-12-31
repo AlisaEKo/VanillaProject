@@ -17,16 +17,16 @@ nav {
     color: white
 }
 
-#navbar {
-    justify-content: right;
-}
+/* #navbar {
+    justify-content: right; */
+/* } */
 
 
-#nav_container {
+/* #nav_container {
     
     justify-content: center;
     
-}
+} */
 
 nav .nav_inside a {
     color: rgb(243, 12, 243);
@@ -51,6 +51,13 @@ main {
     color: black;
     text-align: justify;
     border: 2px solid black;
+}
+
+
+main.dark {
+    background-color: darkblue;
+    color: rgb(227, 143, 190);
+    border: 2px solid white;
 }
 
 

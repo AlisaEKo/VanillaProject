@@ -12,3 +12,9 @@ function checkUsher() {
         redirect('../login/src/login.html');
     }
 }
+
+// function onDeleteClick() {
+//     localStorage.removeItem("username");
+//     // idH1.innerHTML = "";
+//     id_h2.innerHTML = "Goodbye";
+// }
