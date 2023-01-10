@@ -1,17 +1,3 @@
-$(document).ready(function() {
-    $(".darkMode").click(function() {
-        $(".dark_mode").css({"color": "white"});
-        $("body").css({"background-color": "black"});
-        // $("h1").toggle(1000, function(){
-        // });
-    });
-});
-
-// function myFunction() {
-//     let element = document.main;
-//     element.classList.toggle("dark_mode");
-//  }
-
 let darkMode;
 
 if (localStorage.getItem('dark_mode')) {  
@@ -29,24 +15,30 @@ localStorage.setItem('dark_mode', darkMode);
 if (localStorage.getItem('dark_mode') == 'dark') {
   // if the above is 'dark' then apply .dark to the body
   $('body').addClass('dark');  
+  // $('div').addClass('dark');
   // hide the 'dark' button
-  $('.dark-button').hide();
+  $('.dark_button').hide();
   // show the 'light' button
-  $('.light-button').show();
+  $('.light_button').show();
 }
 
-$('.dark-button').on('click', function() {  
-    $('.dark-button').hide();
-    $('.light-button').show();
+$('.dark_button').on('click', function() {  
+    $('.dark_button').hide();
+    $('.light_button').show();
     $('body').addClass('dark');  
+    // $('div').addClass('dark');
     // set stored value to 'dark'
     localStorage.setItem('dark_mode', 'dark');
   });
   
-  $('.light-button').on('click', function() {  
-    $('.light-button').hide();
-    $('.dark-button').show();
+  $('.light_button').on('click', function() {  
+    $('.light_button').hide();
+    $('.dark_button').show();
     $('body').removeClass('dark');
+    // $('div').removeClass('dark');
     // set stored value to 'light'
     localStorage.setItem('dark_mode', 'light');   
   });
+
+
+// queryselector.classList.append

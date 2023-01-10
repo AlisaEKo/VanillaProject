@@ -18,3 +18,16 @@ function checkUsher() {
 //     // idH1.innerHTML = "";
 //     id_h2.innerHTML = "Goodbye";
 // }
+
+$(document.body).click(function () {
+    $("main").each(function (i) {
+        if (this.style.color !== "white" && this.style.background !== "black") {
+            this.style.color = "white", this.style.background = "black";
+            $(".dark_mode").text("Light Mode");
+        } else {
+            this.style.color = "", this.style.background = "";
+            $(".dark_mode").text("Dark Mode");
+        }
+
+    });
+});
